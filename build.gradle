@@ -48,3 +48,11 @@ configurations {
 tasks.named('test') {
 	useJUnitPlatform()
 }
+
+sonarqube {
+	properties {
+		property "sonar.projectKey", "spring_java_features"
+		property "sonar.organization", "ugurturkyilmaz"
+		property "sonar.host.url", "https://sonarcloud.io"
+	}
+}
