@@ -54,5 +54,6 @@ sonarqube {
 		property "sonar.projectKey", "spring_java_features"
 		property "sonar.organization", "ugurturkyilmaz"
 		property "sonar.host.url", "https://sonarcloud.io"
+		property "sonar.login", "138c631f43c42e45c01b32ede35c23b385ecdd72"
 	}
 }
