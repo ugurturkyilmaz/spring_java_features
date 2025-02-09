@@ -1,0 +1,43 @@
+spring:
+  application:
+    name: demo
+  #kafka:
+    #bootstrap-servers: localhost:9092
+    #consumer:
+      #group-id: my-group
+      #auto-offset-reset: earliest
+      #key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+      #value-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+    #producer:
+      #key-serializer: org.apache.kafka.common.serialization.StringSerializer
+      #value-serializer: org.apache.kafka.common.serialization.StringSerializer
+server:
+  compression:
+    enabled: true
+    min-response-size: 2048
+    mime-types:
+      - text/html
+      - text/xml
+      - text/plain
+      - application/json
+      - application/xml
+
+resilience4j:
+  circuitbreaker:
+    instances:
+      myCircuitBreaker:
+        slidingWindowSize: 5
+        minimumNumberOfCalls: 3
+        failureRateThreshold: 50
+        waitDurationInOpenState: 10000
+
+logging:
+  level:
+    io:
+      github:
+        resilience4j:
+          circuitbreaker: DEBUG
+management:
+  tracing:
+    sampling:
+      probability: 1.0
