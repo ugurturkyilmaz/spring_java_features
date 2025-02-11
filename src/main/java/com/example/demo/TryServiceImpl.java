@@ -7,7 +7,7 @@ import org.springframework.stereotype.Service;
 import java.util.Random;
 
 @Service
-public class TestServiceImpl {
+public class TryServiceImpl {
 
     @CircuitBreaker(name = "myCircuitBreaker", fallbackMethod = "fallbackMethod")
     public String testCircuitBreaker(boolean isError) {

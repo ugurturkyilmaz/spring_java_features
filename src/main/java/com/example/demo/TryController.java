@@ -12,13 +12,10 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
-import java.util.HashMap;
-import java.util.Map;
-
 @RestController
-public class TestController {
+public class TryController {
 
-    private final TestServiceImpl testService;
+    private final TryServiceImpl testService;
     private final KafkaProducerService kafkaProducerService;
     private final RedisPubService redisPubService;
     private final JwtConfiguration jwtConfiguration;
@@ -26,7 +23,7 @@ public class TestController {
     private final LoggingService loggingService;
     private final LoggingServiceLog4J loggingServiceLog4J;
 
-    public TestController(TestServiceImpl testService, KafkaProducerService kafkaProducerService, RedisPubService redisPubService, JwtConfiguration jwtConfiguration, JwtService jwtService, LoggingService loggingService, LoggingServiceLog4J loggingServiceLog4J) {
+    public TryController(TryServiceImpl testService, KafkaProducerService kafkaProducerService, RedisPubService redisPubService, JwtConfiguration jwtConfiguration, JwtService jwtService, LoggingService loggingService, LoggingServiceLog4J loggingServiceLog4J) {
         this.testService = testService;
         this.kafkaProducerService = kafkaProducerService;
         this.redisPubService = redisPubService;

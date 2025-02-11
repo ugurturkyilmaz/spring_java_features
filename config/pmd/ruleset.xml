@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ruleset name="Custom Rules"
+         xmlns="http://pmd.sourceforge.net/ruleset/2.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://pmd.sourceforge.net/ruleset/2.0.0
+                             http://pmd.sourceforge.net/ruleset_2_0_0.xsd">
+    <description>
+        Projeye özel PMD kuralları.
+    </description>
+
+    <rule ref="category/java/errorprone.xml/EmptyCatchBlock"
+          message="Empty catch blocks should be avoided" >
+        <priority>5</priority>
+    </rule>
+
+    <rule ref="category/java/codestyle.xml/UnnecessaryImport" />
+
+    <!-- İsterseniz priority (öncelik) değeri de atayabilirsiniz -->
+    <!--
+    <rule ref="rulesets/java/codestyle.xml/UnusedImports">
+        <priority>3</priority>
+    </rule>
+    -->
+  </ruleset>
