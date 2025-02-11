@@ -23,7 +23,7 @@ public class TryController {
     private final LoggingService loggingService;
     private final LoggingServiceLog4J loggingServiceLog4J;
 
-    public TryController(TryServiceImpl testService, KafkaProducerService kafkaProducerService, RedisPubService redisPubService, JwtConfiguration jwtConfiguration, JwtService jwtService, LoggingService loggingService, LoggingServiceLog4J loggingServiceLog4J) {
+    public TryController(final TryServiceImpl testService, final KafkaProducerService kafkaProducerService, final RedisPubService redisPubService, final JwtConfiguration jwtConfiguration, final JwtService jwtService, LoggingService loggingService, LoggingServiceLog4J loggingServiceLog4J) {
         this.testService = testService;
         this.kafkaProducerService = kafkaProducerService;
         this.redisPubService = redisPubService;

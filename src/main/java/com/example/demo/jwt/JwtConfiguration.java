@@ -18,7 +18,7 @@ public class JwtConfiguration {
     public String createToken() {
 
         long now = System.currentTimeMillis();
-        long expirationTime = 300000; // 5 dk
+        long expirationTime = 300_000; // 5 dk
         Random random = new Random();
         int number = random.nextInt(20);
         // Custom claims'leri bir Map içinde tutabiliriz:
